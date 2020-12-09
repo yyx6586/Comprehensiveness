@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 95));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -236,11 +236,16 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     goToLicence: function goToLicence(e) {
       console.log(e);
+      if (e === 0) {
+        uni.navigateTo({
+          url: "../news/index" });
+
+      };
       if (e === 2) {
         uni.navigateTo({
           url: "../licence/index" });
 
-      }
+      };
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

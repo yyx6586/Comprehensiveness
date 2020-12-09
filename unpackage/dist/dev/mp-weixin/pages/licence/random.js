@@ -128,7 +128,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 16));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 16));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -162,11 +180,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 19));
 var _vuex = __webpack_require__(/*! vuex */ 11);
-var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config.js */ 20));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config.js */ 20));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
 
 {
   data: function data() {
     return {
+      // flag:0,
+      // list:[],
+      // answer:'',
+      // answerFlag:{'1':'A','2':'B','3':'C','4':'D'},
+
       showImgHidden: true, //图片是否显示
       showCHidden: true, //选项 C 是否显示
       showDHidden: true, //选项 D 是否显示
@@ -191,18 +214,30 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       optionC: "", //选项 C
       optionD: "", //选项 D
       optionList: [], //选项集
-      errList: [] //错题集
+      errExerciseList: {} //错题集
     };
   },
 
   onLoad: function onLoad(option) {//opthin为object类型，会序列化上页面传递的参数
-    this.model = option.inputTypeValue,
-    this.subjectName = option.inputSubjectValue,
-    console.log(option.inputTypeValue), //打印出上页面传递的参数
-    console.log(option.inputSubjectValue),
-    console.log(this.subject),
-    console.log(this.model),
-    this.getExerciseList();
+    this.model = option.inputTypeValue;
+    this.subjectName = option.inputSubjectValue;
+    console.log(option.inputTypeValue); //打印出上页面传递的参数
+    console.log(option.inputSubjectValue);
+    console.log(this.subjectName);
+    console.log(this.model);
+
+  },
+
+  mounted: function mounted() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+              // 显示加载框
+              uni.showLoading({
+                title: '加载中...' });_context.next = 3;return (
+
+
+                _this.getExerciseList());case 3:
+
+              //关闭加载框
+              uni.hideLoading();case 4:case "end":return _context.stop();}}}, _callee);}))();
   },
 
   methods: _objectSpread(_objectSpread({},
@@ -210,17 +245,23 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
     getLicence: 'common/getLicence' })), {}, {
 
 
-    getExerciseList: function getExerciseList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
-                if (_this.subjectName == "科目1") {
-                  _this.subject = 1;
+    // selectAnswer(answer){
+    // 	if()
+    // 	this.list[this.count].answer
+    // },
+
+    //获取所有练习题
+    getExerciseList: function getExerciseList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+                if (_this2.subjectName == "科目1") {
+                  _this2.subject = 1;
                 }
 
-                if (_this.subjectName == "科目4") {
-                  _this.subject = 4;
-                  _this.model = "";
+                if (_this2.subjectName == "科目4") {
+                  _this2.subject = 4;
+                  _this2.model = "";
                 }
-                console.log(_this.subjectName);
-                console.log(_this.subject);
+                console.log(_this2.subjectName);
+                console.log(_this2.subject);
 
                 // await request("http://v.juhe.cn/jztk/query", {
                 // // 传参参数名：参数值,如果没有，就不需要传
@@ -233,16 +274,17 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
                 // 	this.exerciseList = res.result
                 // 	console.log(res)
                 // })
-                _context.next = 6;return (
-                  _this.getLicence({
+                _context2.next = 6;return (
+                  _this2.getLicence({
                     "subject": '1', //this.subject,
                     "model": 'c1', //this.model,
                     "key": config.KEY,
                     "testType": 'rand' //this.testType
-                  }));case 6:res = _context.sent;
-                _this.exerciseList = res.result;
-                // this.getExercise()
-              case 8:case "end":return _context.stop();}}}, _callee);}))();},
+                  }));case 6:res = _context2.sent;
+                _this2.exerciseList = res.result;
+                // this.list = res.result
+                _this2.getExercise();case 9:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
 
     //获取每一道练习题的详细
     getExercise: function getExercise() {
@@ -326,13 +368,19 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       }
     },
 
-    //获取错题集
-    getErrList: function getErrList() {
-      if (this.myAnswer != this.answerVue) {
-        this.errList.push(this.exercise);
-      }
-      console.log(this.errList);
+    //保存错题集
+    setErrExerciseList: function setErrExerciseList() {
+      var key = this.exercise.id;
+      var value = this.exercise;
+      this.errExerciseList[key] = value;
+      uni.setStorageSync("randomErrExerciseList", this.errExerciseList);
     },
+
+    // //获取错题集
+    // getErrExerciseList(){
+    // 	this.errExerciseList = uni.getStorageSync("errExerciseList");
+    // 	console.log(this.errExerciseList);
+    // },
 
     //获取完成练习题自己选的答案 A
     getMyQuestionA: function getMyQuestionA() {
@@ -340,7 +388,9 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       this.myAnswerList.push(this.myAnswer);
       this.answerIsShow();
       this.explainsIsShow();
-      this.getErrList();
+      if (this.myAnswer != this.answerVue) {
+        this.setErrExerciseList();
+      };
     },
 
     //获取完成练习题自己选的答案 B
@@ -349,7 +399,9 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       this.myAnswerList.push(this.myAnswer);
       this.answerIsShow();
       this.explainsIsShow();
-      this.getErrList();
+      if (this.myAnswer != this.answerVue) {
+        this.setErrExerciseList();
+      };
     },
 
     //获取完成练习题自己选的答案 C
@@ -358,7 +410,9 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       this.myAnswerList.push(this.myAnswer);
       this.answerIsShow();
       this.explainsIsShow();
-      this.getErrList();
+      if (this.myAnswer != this.answerVue) {
+        this.setErrExerciseList();
+      };
     },
 
     //获取完成练习题自己选的答案 D
@@ -367,7 +421,9 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
       this.myAnswerList.push(this.myAnswer);
       this.answerIsShow();
       this.explainsIsShow();
-      this.getErrList();
+      if (this.myAnswer != this.answerVue) {
+        this.setErrExerciseList();
+      };
     },
 
     //清空页面
@@ -400,15 +456,22 @@ var config = _interopRequireWildcard(__webpack_require__(/*! ../../common/config
 
     //下一页
     addCount: function addCount() {
-      this.clear();
-
       this.count++;
-      if (this.count >= 100) {
-        this.count = 100;
+      if (this.count >= this.errExerciseList.length) {
+        this.count = this.errExerciseList.length - 1;
+
+        uni.showToast({
+          title: "已是最后一道题了哦",
+          icon: "none",
+          position: "center" });
+
+      } else {
+        this.clear();
       }
       console.log(this.count);
       this.getExercise();
     } }) };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

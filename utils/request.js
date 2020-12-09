@@ -16,22 +16,13 @@ const errorResult = {
 	]
 }
 
-const request = (url = "", data = {}, type = 'get') => {
+const request = (url = "", data = {}, type = 'GET') => {
     return new Promise((resolve, reject) => {
         uni.request({
             method: type,
             url: url,
             data,
             // dataType: 'json', 
-		    header:{
-				"Access-Control-Allow-Headers": "content-type,x-requested-with",
-				"version": "1.0.0",
-				"Accept": "application/json",
-				"_locale": "zh_CN",
-				"Accept-Language": "zh-CN",
-				"Content-Language": "zh-CN",
-				"Content-Type": "application/json;charset=UTF-8"
-			}
         }).then((response) => {
             // setTimeout(function() {
             //     uni.hideLoading();

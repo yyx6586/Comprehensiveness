@@ -104,11 +104,16 @@
 		methods:{
 			goToLicence(e){
 				console.log(e);
+				if(e === 0){
+					uni.navigateTo({
+						url:"../news/index",
+					})
+				};
 				if(e === 2){
 					uni.navigateTo({
 						url:"../licence/index",
 					})
-				}
+				};
 			}
 		}
 	}

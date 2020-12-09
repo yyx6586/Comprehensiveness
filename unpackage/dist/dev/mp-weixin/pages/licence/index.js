@@ -199,6 +199,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
@@ -260,6 +262,63 @@ var _default =
 
       uni.navigateTo({
         url: "random?inputTypeValue=" + inputTypeValue + "&inputSubjectValue=" + inputSubjectValue });
+
+    },
+
+    goToOrder: function goToOrder(inputTypeValue, inputSubjectValue) {
+      if (this.inputTypeValue == "") {
+        uni.showToast({
+          title: this.type,
+          icon: "none",
+          mask: true,
+          position: 'center' });
+
+        return;
+      }
+
+      if (this.inputSubjectValue == "") {
+        uni.showToast({
+          title: this.subject,
+          icon: 'none',
+          mask: true,
+          position: 'center' });
+
+        return;
+      }
+
+      uni.navigateTo({
+        url: "order?inputTypeValue=" + inputTypeValue + "&inputSubjectValue=" + inputSubjectValue });
+
+    },
+
+    goToWrongExercise: function goToWrongExercise(inputTypeValue, inputSubjectValue) {
+      uni.navigateTo({
+        url: "wrong-exercise" });
+
+    },
+
+    goToTest: function goToTest(inputTypeValue, inputSubjectValue) {
+      if (this.inputTypeValue == "") {
+        uni.showToast({
+          title: this.type,
+          icon: "none",
+          mask: true,
+          position: 'center' });
+
+        return;
+      }
+
+      if (this.inputSubjectValue == "") {
+        uni.showToast({
+          title: this.subject,
+          icon: 'none',
+          mask: true,
+          position: 'center' });
+
+        return;
+      }
+      uni.navigateTo({
+        url: "test?inputTypeValue=" + inputTypeValue + "&inputSubjectValue=" + inputSubjectValue });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

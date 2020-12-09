@@ -8,7 +8,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wx5b7a76ac8f837119",
   "projectname": "Comprehensiveness",
   "condition": {
     "search": {
@@ -24,15 +24,8 @@
       "list": []
     },
     "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "name": "表单",
-          "query": "",
-          "id": 0,
-          "pathName": "pages/licence/random"
-        }
-      ]
+      "current": -1,
+      "list": []
     }
   }
 }

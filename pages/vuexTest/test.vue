@@ -12,16 +12,26 @@
 			<button form-type="submit" >提交</button>
 		</form>
 		
+		<pullDown></pullDown>
+		
+		
 	</view>
 </template>
 
 <script>
+	import pullDown from '@/components/pull-down/pull-down.vue'
 	import {mapActions, mapMutations, mapState, mapGetters} from 'vuex';
 	
 	export default{
+		components:{
+			pullDown,
+		},
+		
 		data(){
 			return{
-				user:""
+				user:"",
+				text:"请选择驾照类型",
+				TextList:["a1","a2","b1","b2","c1","c2"],
 			}
 		},
 		

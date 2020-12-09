@@ -3,6 +3,11 @@
     "pages/login/login",
     "pages/licence/index",
     "pages/licence/random",
+    "pages/licence/order",
+    "pages/licence/wrong-exercise",
+    "pages/licence/test",
+    "pages/news/index",
+    "pages/news/news-details",
     "pages/index/index"
   ],
   "subPackages": [],
@@ -12,5 +17,9 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "base-view": "/components/base-view",
+    "top-tips": "/components/top-tips"
+  },
+  "sitemapLocation": "sitemap57.json"
 }

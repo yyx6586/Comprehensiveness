@@ -4,8 +4,9 @@
 		<view style="display: flex; flex-direction: column;align-items: center; margin-top: 40rpx;">
 			<view style="display: flex; flex-direction: row; justify-content: center; margin-top: 15rpx; margin-bottom: 15rpx;">
 				<text style="font-size: 35rpx; margin-right: 20rpx; line-height: 50rpx; text-align: center;">{{type}}</text>
-				<input v-model="inputTypeValue" type="text" style="width: 300rpx; height: 50rpx; border: 1rpx solid #BEBEBE; border-radius: 30rpx; text-align: center;"/>
-				<image @click.stop="showTypeHidden = !showTypeHidden" src="../../static/licence/xiala.png" style="width: 40rpx; height: 40rpx; margin-left: 15rpx;margin-top: 5rpx;"></image>
+				<view @click.stop="showTypeHidden = !showTypeHidden" :value="inputTypeValue" type="text" style="width: 300rpx; height: 50rpx; border: 1rpx solid #BEBEBE; border-radius: 30rpx; text-align: center;">{{inputTypeValue}}</view>
+				<!-- <input /> -->
+				<image src="../../static/licence/xiala.png" style="width: 40rpx; height: 40rpx; margin-left: -50rpx;margin-top: 9rpx;"></image>
 			</view>
 			<view v-if="showTypeHidden" style="text-align: center;left: 0rpx;right: 0rpx;position: fixed;bottom: 0rpx;background-color: #F4F5F6; border-radius: 40rpx;">
 				<text @click="getTypeValue(index)" v-for="(item,index) in licenceTypeList" :key="index" style="display: block; margin-top: 15rpx;font-size: 45rpx; border-bottom: 1rpx solid #DCDCDC;">{{item}}</text>
@@ -20,8 +21,9 @@
 		<view style="display: flex; flex-direction: column;align-items: center; margin-top: 40rpx;">
 			<view style="display: flex; flex-direction: row; justify-content: center; margin-top: 15rpx; margin-bottom: 15rpx;">
 				<text style="font-size: 35rpx; margin-right: 20rpx; line-height: 50rpx; text-align: center;">{{subject}}</text>
-				<input v-model="inputSubjectValue" type="text" style="width: 300rpx; height: 50rpx; border: 1rpx solid #BEBEBE; border-radius: 30rpx; text-align: center;"/>
-				<image @click.stop="showSubjectHidden = !showSubjectHidden" src="../../static/licence/xiala.png" style="width: 40rpx; height: 40rpx; margin-left: 15rpx;margin-top: 5rpx;"></image>
+				<view @click.stop="showSubjectHidden = !showSubjectHidden" :value="inputSubjectValue" type="text" style="width: 300rpx; height: 50rpx; border: 1rpx solid #BEBEBE; border-radius: 30rpx; text-align: center;">{{inputSubjectValue}}</view>
+				<!-- <input /> -->
+				<image src="../../static/licence/xiala.png" style="width: 40rpx; height: 40rpx; margin-left: -50rpx;margin-top: 9rpx;"></image>
 			</view>
 			<view v-if="showSubjectHidden" style="text-align: center;left: 0rpx;right: 0rpx;position: fixed;bottom: 0rpx;background-color: #F4F5F6; border-radius: 40rpx;">
 				<text @click="getSubjectValue(index)" v-for="(item,index) in licenceSubjectList" :key="index" style="display: block; margin-top: 15rpx;font-size: 45rpx; border-bottom: 1rpx solid #DCDCDC;">{{item}}</text>
@@ -38,7 +40,7 @@
 				<text style="color: #FFFFFF; line-height: 200rpx; text-align: center;">随机练习</text>
 			</view>
 			
-			<view style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #00CE47; text-align: center;">
+			<view @click="goToOrder(inputTypeValue,inputSubjectValue)" style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #00CE47; text-align: center;">
 				<text style="color: #FFFFFF; line-height: 200rpx; text-align: center;">顺序练习</text>
 			</view>
 		</view>
@@ -46,11 +48,11 @@
 		
 		<!-- 错题与考试 -->
 		<view style="display: flex; flex-direction: row; justify-content: center; align-items: center;margin-top: 80rpx;">
-			<view style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #F823FF; text-align: center;margin-right: 80rpx;">
+			<view @click="goToWrongExercise()" style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #F823FF; text-align: center;margin-right: 80rpx;">
 				<text style="color: #FFFFFF; line-height: 200rpx; text-align: center;">错题集</text>
 			</view>
 			
-			<view style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #FFCC33; text-align: center;">
+			<view @click="goToTest(inputTypeValue,inputSubjectValue)" style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #FFCC33; text-align: center;">
 				<text style="color: #FFFFFF; line-height: 200rpx; text-align: center;">测验</text>
 			</view>
 		</view>
@@ -119,6 +121,63 @@
 				
 				uni.navigateTo({
 					url:"random?inputTypeValue="+inputTypeValue + "&inputSubjectValue=" + inputSubjectValue,
+				})
+			},
+			
+			goToOrder(inputTypeValue,inputSubjectValue){
+				if(this.inputTypeValue == ""){
+					uni.showToast({
+						title:this.type,
+						icon:"none",
+						mask:true,
+						position:'center',
+					})
+					return;
+				}
+				
+				if(this.inputSubjectValue == ""){
+					uni.showToast({
+						title:this.subject,
+						icon:'none',
+						mask:true,
+						position:'center',
+					})
+					return;
+				}
+				
+				uni.navigateTo({
+					url:"order?inputTypeValue="+inputTypeValue + "&inputSubjectValue=" + inputSubjectValue,
+				})
+			},
+			
+			goToWrongExercise(inputTypeValue, inputSubjectValue){
+				uni.navigateTo({
+					url:"wrong-exercise",
+				})
+			},
+			
+			goToTest(inputTypeValue,inputSubjectValue){
+				if(this.inputTypeValue == ""){
+					uni.showToast({
+						title:this.type,
+						icon:"none",
+						mask:true,
+						position:'center',
+					})
+					return;
+				}
+				
+				if(this.inputSubjectValue == ""){
+					uni.showToast({
+						title:this.subject,
+						icon:'none',
+						mask:true,
+						position:'center',
+					})
+					return;
+				}
+				uni.navigateTo({
+					url:"test?inputTypeValue="+inputTypeValue + "&inputSubjectValue=" + inputSubjectValue,
 				})
 			}
 			

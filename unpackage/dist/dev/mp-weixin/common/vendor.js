@@ -9406,7 +9406,21 @@ var actions = {
                   reject(res.jsonError[0]._exceptionMessage);
                 } else {
                   resolve(res);
+                  console.log(res);
                 }case 4:case "end":return _context.stop();}}}, _callee);}));return function (_x, _x2) {return _ref3.apply(this, arguments);};}());
+
+  },
+
+  //新闻头条
+  getNews: function getNews(_ref4, data) {var commit = _ref4.commit,state = _ref4.state;
+    return new Promise( /*#__PURE__*/function () {var _ref5 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(resolve, reject) {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  (0, _request.default)(config.NEWS_API, data));case 2:res = _context2.sent;
+                if (res.jsonError && res.jsonError.length > 0) {
+                  reject(res.jsonError[0]._exceptionMessage);
+                } else {
+                  resolve(res);
+                  console.log(res);
+                }case 4:case "end":return _context2.stop();}}}, _callee2);}));return function (_x3, _x4) {return _ref5.apply(this, arguments);};}());
 
   } };var _default =
 
@@ -10228,23 +10242,14 @@ var errorResult = {
 
 
 
-var request = function request() {var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'get';
+var request = function request() {var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'GET';
   return new Promise(function (resolve, reject) {
     uni.request({
       method: type,
       url: url,
-      data: data,
+      data: data
       // dataType: 'json', 
-      header: {
-        "Access-Control-Allow-Headers": "content-type,x-requested-with",
-        "version": "1.0.0",
-        "Accept": "application/json",
-        "_locale": "zh_CN",
-        "Accept-Language": "zh-CN",
-        "Content-Language": "zh-CN",
-        "Content-Type": "application/json;charset=UTF-8" } }).
-
-    then(function (response) {
+    }).then(function (response) {
       // setTimeout(function() {
       //     uni.hideLoading();
       // }, 200);
@@ -10284,8 +10289,13 @@ var _default = request;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.KEY = exports.LICENCE_API = void 0;var LICENCE_API = "http://v.juhe.cn/jztk/query";exports.LICENCE_API = LICENCE_API;
-var KEY = "0e530c522fff89b6fc8cd754da718f5c";exports.KEY = KEY;
+Object.defineProperty(exports, "__esModule", { value: true });exports.NEWS_KEY = exports.NEWS_API = exports.KEY = exports.LICENCE_API = void 0; //驾照
+var LICENCE_API = "http://v.juhe.cn/jztk/query";exports.LICENCE_API = LICENCE_API;
+var KEY = "0e530c522fff89b6fc8cd754da718f5c";
+
+//新闻头条
+exports.KEY = KEY;var NEWS_API = "http://v.juhe.cn/toutiao/index";exports.NEWS_API = NEWS_API;
+var NEWS_KEY = "267fba2786d7559bd905bca58637b9af";exports.NEWS_KEY = NEWS_KEY;
 
 /***/ }),
 /* 21 */
@@ -10343,6 +10353,63 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 mutations;exports.default = _default;
+
+/***/ }),
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */
+/*!*****************************************************************!*\
+  !*** /Users/zxl/Documents/yyx/Comprehensiveness/utils/utils.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //生成一个随机的整数
+var getRandom = function random(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  // return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+  return parseInt(Math.floor(Math.random() * (max - min + 1)) + min); //含最大值，含最小值 
+};var _default =
+
+getRandom;exports.default = _default;
 
 /***/ })
 ]]);
